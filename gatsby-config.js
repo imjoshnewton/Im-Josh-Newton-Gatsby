@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `I'm Josh Newton`,
+    description: `Personal site of Josh Newton.`,
+    author: `@imjoshnewton`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,26 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-unsplash`,
+      options: {
+        appId: `0b635e51b4da768609d6f2147a2b3a8e095d978ec6666b059c0b02c182919eba`,
+        collections: [
+          `6768256`
+        ],
+        // optional: will only get page 1, so increase this count to include > 10 photos
+        perPage: `100`
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `gvsclgjjlth9`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'RJzxZdxGxBdY-l9N1OfJhRDSYHRBDor6xEuYuTxnpbM',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
