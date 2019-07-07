@@ -7,12 +7,14 @@ class Section extends Component {
       <section id={this.props.id} className="container body">
         <ScrollAnimation
           animateIn="fadeInRight"
-          animateOnce={true}>
+          animateOnce={true}
+        >
       		<h1>{this.props.sectionTitle}</h1>
         </ ScrollAnimation>
         <ScrollAnimation
           animateIn="fadeIn"
-          animateOnce={true}>
+          animateOnce={true}
+        >
       		<div className="wrapper">
             {this.props.children}
       		</div>

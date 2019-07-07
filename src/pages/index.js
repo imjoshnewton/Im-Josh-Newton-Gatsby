@@ -10,43 +10,41 @@ import "animate.css/animate.min.css";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-                {
-                  allContentfulPage(filter: {pageTitle: {eq: "Home"}}) {
-                    edges {
-                      node {
-                        pageTitle
-                        section1Title
-                        childContentfulPageSection1RichTextNode {
-                          content {
-                            content {
-                              value
-                            }
-                          }
-                        }
-                        section2Title
-                        childContentfulPageSection2RichTextNode {
-                          content {
-                            content {
-                              value
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }`);
+    {
+      contentfulPage(pageTitle: {eq: "Home"}) {
+        pageTitle
+        section1Title
+        section1 {
+          content {
+            content {
+              value
+              nodeType
+            }
+          }
+        }
+        section2Title
+        section2 {
+          content {
+            content {
+              value
+              nodeType
+            }
+            }
+          }
+        }
+      }`);
 
-  console.log('data', data);
+  // console.log('data', data);
 
   return (<Layout>
     <SEO title="Home" />
     <Hero />
     <Section
-      id={data.allContentfulPage.edges[0].node.section1Title}
-      sectionTitle={data.allContentfulPage.edges[0].node.section1Title}
+      id={data.contentfulPage.section1Title}
+      sectionTitle={data.contentfulPage.section1Title}
       background='dark'
     >
-    {data.allContentfulPage.edges[0].node.childContentfulPageSection1RichTextNode.content.map((content, index, arr) => {
+    {data.contentfulPage.section1.content.map((content, index, arr) => {
         return(
           <p key={index}>{content.content[0].value}</p>
         )
@@ -65,8 +63,8 @@ const IndexPage = () => {
       </p>
     </ Section>
     <Section
-      id={data.allContentfulPage.edges[0].node.section2Title}
-      sectionTitle={data.allContentfulPage.edges[0].node.section2Title}
+      id={data.contentfulPage.section2Title}
+      sectionTitle={data.contentfulPage.section2Title}
       background='light'
     >
       <p>

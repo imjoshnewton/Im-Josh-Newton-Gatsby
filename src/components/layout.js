@@ -13,6 +13,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faAngleUp, faAngleDown, faBars } from '@fortawesome/free-solid-svg-icons'
 
+import ScrollAnimation from 'react-animate-on-scroll'
+
 import Header from "./header"
 import "./layout.scss"
 import "animate.css/animate.min.css";
@@ -37,7 +39,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <ScrollAnimation
+        animateIn="bounceInDown"
+        animateOnce={true}
+        initiallyVisible={true}
+      >
       <Header siteTitle={data.site.siteMetadata.title} />
+      </ScrollAnimation>
       <div
         style={{
           margin: `0 auto`,
