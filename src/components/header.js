@@ -1,9 +1,5 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import ScrollAnimation from 'react-animate-on-scroll'
-import { navigate } from '@reach/router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "animate.css/animate.min.css";
 
@@ -27,7 +23,7 @@ class Nav extends React.Component {
   }
 
   handleLinkClick(val) {
-    const navLink = "#"+val;
+    // const navLink = "#"+val;
     this.setState({menuOpen: false});
     // navigate(navLink);
   }
@@ -169,8 +165,8 @@ class Menu extends React.Component {
         width: '100vw',
         display: 'flex',
         flexDirection: 'column',
-        background: 'black',
-        opacity: 0.65,
+        background: '#333',
+        opacity: 0.85,
         color: '#fafafa',
         transition: 'height 0.3s ease',
         zIndex: 2,
