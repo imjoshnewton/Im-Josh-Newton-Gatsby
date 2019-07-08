@@ -3,6 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 import ScrollAnimation from "react-animate-on-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Div100vh from "react-div-100vh"
 
 const Hero = () => {
   // const data = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ const Hero = () => {
   //   `)
 
   return (
-    <header id="header" className="container header">
+    <Div100vh id="header" className="container header">
       <div className="bg"></div>
       <div className="bg"></div>
       <div className="bg"></div>
@@ -38,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
       </ScrollAnimation>
-    </header>
+    </Div100vh>
   )
 }
 

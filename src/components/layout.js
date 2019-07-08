@@ -18,7 +18,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons"
 
-import ScrollAnimation from "react-animate-on-scroll"
+// import ScrollAnimation from "react-animate-on-scroll"
 
 import Header from "./header"
 import "./layout.scss"
