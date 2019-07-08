@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Section from "../components/section"
+import Connect from "../components/connect"
 import SEO from "../components/seo"
 
 import "animate.css/animate.min.css"
@@ -114,6 +115,7 @@ const IndexPage = () => {
           something.
         </p>
       </Section>
+      <Connect />
     </Layout>
   )
 }
