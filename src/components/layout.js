@@ -16,6 +16,8 @@ import {
   faAngleUp,
   faAngleDown,
   faBars,
+  faPhone,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
 
 // import ScrollAnimation from "react-animate-on-scroll"
@@ -24,7 +26,9 @@ import Header from "./header"
 import "./layout.scss"
 import "animate.css/animate.min.css"
 
-library.add(fab, faCheckSquare, faAngleUp, faAngleDown, faBars)
+library.add(fab, faCheckSquare, faAngleUp, faAngleDown, faBars,
+  faPhone,
+  faEnvelope)
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
