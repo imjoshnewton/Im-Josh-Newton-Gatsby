@@ -20,7 +20,7 @@ class Hero extends Component {
     this.state = {height: props.height};
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.setState({height: window.innerHeight + 'px'});
   }
 
