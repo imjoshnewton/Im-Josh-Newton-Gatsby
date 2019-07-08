@@ -16,50 +16,50 @@ class Hero extends Component {
   //   }
   //   `)
   constructor(props) {
-    super(props);
-    this.state = {height: props.height};
+    super(props)
+    this.state = { height: props.height }
   }
 
-  componentDidMount(){
-    this.setState({height: (window.innerHeight+50) + 'px'});
+  componentDidMount() {
+    this.setState({ height: window.innerHeight + 50 + "px" })
   }
 
   render() {
-  
-  const styles = {
-    header: {
-      minHeight: this.state.height
-    },
-    bg: {
-      minHeight: this.state.height,
-      maxHeight: this.state.height
-    },
-  }
+    const styles = {
+      header: {
+        minHeight: this.state.height,
+      },
+      bg: {
+        minHeight: this.state.height,
+        maxHeight: this.state.height,
+      },
+    }
 
-  return (
-    <header id="header" style={styles.header} className="container header">
-      <div style={styles.bg} className="bg"></div>
-      <div style={styles.bg} className="bg"></div>
-      <div style={styles.bg} className="bg"></div>
-      <div style={styles.bg} className="bg"></div>
-      <div style={styles.bg} className="bg"></div>
+    return (
+      <header id="header" style={styles.header} className="container header">
+        <div style={styles.bg} className="bg"></div>
+        <div style={styles.bg} className="bg"></div>
+        <div style={styles.bg} className="bg"></div>
+        <div style={styles.bg} className="bg"></div>
+        <div style={styles.bg} className="bg"></div>
 
-      <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
-        <Link to="/#About">
-          <h1 id="name">I'M JOSH NEWTON</h1>
-        </Link>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
-        <div className="wrapper">
-          <div className="button">
-            <Link to="/#About">
-              <FontAwesomeIcon icon="angle-down" />
-            </Link>
+        <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
+          <Link to="/#About">
+            <h1 id="name">I'M JOSH NEWTON</h1>
+          </Link>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
+          <div className="wrapper">
+            <div className="button">
+              <Link to="/#About">
+                <FontAwesomeIcon icon="angle-down" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </ScrollAnimation>
-    </header>
-  )}
+        </ScrollAnimation>
+      </header>
+    )
+  }
 }
 
 // Hero.propTypes = {
@@ -67,7 +67,7 @@ class Hero extends Component {
 // };
 
 Hero.defaultProps = {
- height:'800px'
-};
+  height: "800px",
+}
 
 export default Hero
