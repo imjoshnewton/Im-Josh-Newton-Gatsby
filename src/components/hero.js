@@ -25,13 +25,18 @@ class Hero extends Component {
   }
 
   render() {
+  
+  const minHeight = {
+    minHeight: this.state.height
+  }
+
   return (
-    <header id="header" style={ { minHeight: `${ this.state.height }` } } className="container header">
-      <div className="bg"></div>
-      <div className="bg"></div>
-      <div className="bg"></div>
-      <div className="bg"></div>
-      <div className="bg"></div>
+    <header id="header" style={minHeight} className="container header">
+      <div style={minHeight} className="bg"></div>
+      <div style={minHeight} className="bg"></div>
+      <div style={minHeight} className="bg"></div>
+      <div style={minHeight} className="bg"></div>
+      <div style={minHeight} className="bg"></div>
 
       <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
         <Link to="/#About">
