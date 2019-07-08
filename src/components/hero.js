@@ -18,7 +18,7 @@ const Hero = () => {
   //   `)
 
   return (
-    <Div100vh id="header" className="container header">
+    <header id="header" className="container header">
       <div className="bg"></div>
       <div className="bg"></div>
       <div className="bg"></div>
@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
         </div>
       </ScrollAnimation>
-    </Div100vh>
+    </header>
   )
 }
 
