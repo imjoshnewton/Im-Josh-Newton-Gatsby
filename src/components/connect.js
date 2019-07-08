@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 class Connect extends Component {
   render() {
     return (
-      <section id="contact" className="container body">
+      <section id="Connect" className="container body">
       <div className="right-triangle"></div>
         <ScrollAnimation
           animateIn="fadeInRight">
