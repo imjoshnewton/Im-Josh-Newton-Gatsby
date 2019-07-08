@@ -9,13 +9,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faAngleUp, faAngleDown, faBars } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faCheckSquare,
+  faAngleUp,
+  faAngleDown,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons"
+
+// import ScrollAnimation from "react-animate-on-scroll"
 
 import Header from "./header"
 import "./layout.scss"
-import "animate.css/animate.min.css";
+import "animate.css/animate.min.css"
 
 library.add(fab, faCheckSquare, faAngleUp, faAngleDown, faBars)
 

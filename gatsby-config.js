@@ -32,11 +32,9 @@ module.exports = {
       resolve: `gatsby-source-unsplash`,
       options: {
         appId: `0b635e51b4da768609d6f2147a2b3a8e095d978ec6666b059c0b02c182919eba`,
-        collections: [
-          `6768256`
-        ],
+        collections: [`6768256`],
         // optional: will only get page 1, so increase this count to include > 10 photos
-        perPage: `100`
+        perPage: `100`,
       },
     },
     {
@@ -44,7 +42,7 @@ module.exports = {
       options: {
         spaceId: `gvsclgjjlth9`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: 'RJzxZdxGxBdY-l9N1OfJhRDSYHRBDor6xEuYuTxnpbM',
+        accessToken: "RJzxZdxGxBdY-l9N1OfJhRDSYHRBDor6xEuYuTxnpbM",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
