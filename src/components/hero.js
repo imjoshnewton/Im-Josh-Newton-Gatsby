@@ -26,17 +26,23 @@ class Hero extends Component {
 
   render() {
   
-  const minHeight = {
-    minHeight: this.state.height
+  const styles = {
+    header: {
+      minHeight: this.state.height
+    },
+    bg: {
+      minHeight: this.state.height,
+      maxHeight: this.state.height
+    },
   }
 
   return (
-    <header id="header" style={minHeight} className="container header">
-      <div style={minHeight} className="bg"></div>
-      <div style={minHeight} className="bg"></div>
-      <div style={minHeight} className="bg"></div>
-      <div style={minHeight} className="bg"></div>
-      <div style={minHeight} className="bg"></div>
+    <header id="header" style={styles.header} className="container header">
+      <div style={styles.bg} className="bg"></div>
+      <div style={styles.bg} className="bg"></div>
+      <div style={styles.bg} className="bg"></div>
+      <div style={styles.bg} className="bg"></div>
+      <div style={styles.bg} className="bg"></div>
 
       <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
         <Link to="/#About">
