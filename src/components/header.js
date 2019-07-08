@@ -225,8 +225,8 @@ class MenuButton extends React.Component {
         cursor: "pointer",
         padding: "4px",
         margin: "0.5rem",
-        animation: "slideInDown 1.15s ease-in-out .25s 1 forwards",
-        transform: "translateY(-150%)",
+        // animation: "slideInDown 1.15s ease-in-out .25s 1 forwards",
+        // transform: "translateY(-150%)",
       },
       line: {
         height: "2px",
@@ -251,6 +251,7 @@ class MenuButton extends React.Component {
     }
     return (
       <div
+        className="animated bounceInDown" 
         style={styles.container}
         onClick={
           this.props.onClick
