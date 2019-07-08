@@ -21,7 +21,7 @@ class Hero extends Component {
   }
 
   componentDidMount(){
-    this.setState({height: window.outerHeight + 'px'});
+    this.setState({height: (window.innerHeight+50) + 'px'});
   }
 
   render() {
