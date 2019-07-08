@@ -26,7 +26,7 @@ class Hero extends Component {
 
   render() {
   return (
-    <header id="header" style={ minHeight: this.state.height + "px" } className="container header">
+    <header id="header" style={ { minHeight: `${ this.state.height }` } } className="container header">
       <div className="bg"></div>
       <div className="bg"></div>
       <div className="bg"></div>
