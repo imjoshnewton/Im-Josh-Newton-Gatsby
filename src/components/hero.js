@@ -51,9 +51,9 @@ class Hero extends Component {
   )}
 }
 
-Hero.propTypes = {
- height:React.PropTypes.string
-};
+// Hero.propTypes = {
+//  height:React.PropTypes.string
+// };
 
 Hero.defaultProps = {
  height:'800px'
