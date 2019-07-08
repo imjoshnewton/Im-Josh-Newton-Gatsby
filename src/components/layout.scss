@@ -286,7 +286,6 @@ ul {
 
   .bg {
     @include position(fixed, 0 0 0 0);
-    min-height: 100%;
     opacity: 0;
     //transition: transform 0s linear;
     will-change: opacity;
@@ -296,7 +295,7 @@ ul {
       background: $grey-overlay,
         url(https://source.unsplash.com/igmaRVtMhqg/853x480) center center
           no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
       z-index: -1;
     }
 
@@ -305,7 +304,7 @@ ul {
       background: $grey-overlay,
         url(https://source.unsplash.com/5D9SyUI3wHU/853x480) center center
           no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
       z-index: -2;
     }
 
@@ -314,7 +313,7 @@ ul {
       background: $grey-overlay,
         url(https://source.unsplash.com/IZTnVWWbd4U/853x480) center center
           no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
       z-index: -3;
     }
 
@@ -323,7 +322,7 @@ ul {
       background: $grey-overlay,
         url(https://source.unsplash.com/gb7n4cNSmKY/853x480) center center
           no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
       z-index: -4;
     }
 
@@ -332,7 +331,7 @@ ul {
       background: $grey-overlay,
         url(https://source.unsplash.com/6gTxjDrGCVI/853x480) center center
           no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
       z-index: -5;
     }
   }
