@@ -225,7 +225,7 @@ class MenuButton extends React.Component {
         cursor: "pointer",
         padding: "4px",
         margin: "0.5rem",
-        animation: "slideInDown 0s ease-in-out 1.15s 1 forwards",
+        animation: "slideInDown 1.15s ease-in-out .25s 1 forwards",
         transform: "translateY(-150%)",
       },
       line: {
