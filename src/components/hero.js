@@ -1,10 +1,10 @@
-import React from "react"
+import React, { Component } from "react"
 // import { useStaticQuery, graphql, Link } from "gatsby"
 import { Link } from "gatsby"
 import ScrollAnimation from "react-animate-on-scroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Hero = () => {
+class Hero extends Component {
   // const data = useStaticQuery(graphql`
   //   query MyQuery {
   //     unsplashPhoto {
@@ -15,9 +15,17 @@ const Hero = () => {
   //     }
   //   }
   //   `)
+  constructor(props) {
+    super(props);
+    this.state = {height: props.height};
+  }
+
+  componentWillMount(){
+    this.setState({height: window.innerHeight + 'px'});
+  }
 
   return (
-    <header id="header" className="container header">
+    <header id="header" style={ min-height: this.state.height + "px" } className="container header">
       <div className="bg"></div>
       <div className="bg"></div>
       <div className="bg"></div>
@@ -41,5 +49,13 @@ const Hero = () => {
     </header>
   )
 }
+
+Hero.propTypes = {
+ height:React.PropTypes.string
+};
+
+Hero.defaultProps = {
+ height:'800px'
+};
 
 export default Hero
