@@ -286,6 +286,7 @@ ul {
 
   .bg {
     @include position(fixed, 0 0 0 0);
+    min-height: 100%;
     opacity: 0;
     //transition: transform 0s linear;
     will-change: opacity;
