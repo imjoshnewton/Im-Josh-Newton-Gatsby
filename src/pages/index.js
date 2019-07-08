@@ -116,6 +116,7 @@ const IndexPage = () => {
         </p>
       </Section>
       <Connect />
+      <Footer />
     </Layout>
   )
 }
