@@ -24,6 +24,7 @@ class Hero extends Component {
     this.setState({height: window.innerHeight + 'px'});
   }
 
+  render() {
   return (
     <header id="header" style={ min-height: this.state.height + "px" } className="container header">
       <div className="bg"></div>
@@ -47,7 +48,7 @@ class Hero extends Component {
         </div>
       </ScrollAnimation>
     </header>
-  )
+  )}
 }
 
 Hero.propTypes = {
