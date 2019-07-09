@@ -10,7 +10,7 @@ class Footer extends Component {
         <ScrollAnimation animateIn="fadeInRight">
           <h1 className="fadeInRight">SOCIAL</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
+        <ScrollAnimation animateIn="fadeIn" offset={1000}>
           <div className="wrapper">
             <a href="https://facebook.com/newtonjd1" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={["fab", "facebook-square"]} />
