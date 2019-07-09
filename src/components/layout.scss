@@ -240,7 +240,7 @@ ul {
   &.footer {
     justify-content: center;
     text-align: right;
-    align-items: center;
+    align-items: flex-end;
     padding: 5% 15%;
     background: $darkgrey;
 
@@ -401,7 +401,7 @@ ul {
   }
 }
 
-#Contact {
+#Connect {
   min-height: initial;
   position: relative;
   background: $darkgrey;
@@ -738,7 +738,7 @@ ul {
     }
 
     &.footer {
-      text-align: center;
+      align-items: center;
 
       .wrapper {
         justify-content: center;
@@ -765,7 +765,7 @@ ul {
     }
   }
 
-  #contact {
+  #Connect {
     align-items: center;
 
     h1,
