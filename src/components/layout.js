@@ -26,9 +26,15 @@ import Header from "./header"
 import "./layout.scss"
 import "animate.css/animate.min.css"
 
-library.add(fab, faCheckSquare, faAngleUp, faAngleDown, faBars,
+library.add(
+  fab,
+  faCheckSquare,
+  faAngleUp,
+  faAngleDown,
+  faBars,
   faPhone,
-  faEnvelope)
+  faEnvelope
+)
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require

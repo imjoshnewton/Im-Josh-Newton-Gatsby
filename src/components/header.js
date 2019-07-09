@@ -249,7 +249,7 @@ class MenuButton extends React.Component {
     }
     return (
       <div
-        className="animated bounceInDown" 
+        className="animated bounceInDown"
         style={styles.container}
         onClick={
           this.props.onClick
