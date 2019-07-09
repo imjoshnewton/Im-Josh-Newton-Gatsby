@@ -7,10 +7,10 @@ class Footer extends Component {
     return (
       <footer id="footer" className="container footer">
         <div className="fifty-rect"></div>
-        <ScrollAnimation animateIn="fadeInRight">
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           <h1 className="fadeInRight">SOCIAL</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" offset={1000}>
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true} offset={1000}>
           <div className="wrapper">
             <a
               href="https://facebook.com/newtonjd1"

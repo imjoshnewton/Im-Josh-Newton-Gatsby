@@ -7,10 +7,10 @@ class Connect extends Component {
     return (
       <section id="Connect" className="container body">
         <div className="right-triangle"></div>
-        <ScrollAnimation animateIn="fadeInRight">
+        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
           <h1 className=" fadeInRight">CONTACT</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" offset={150}>
+        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <div className="wrapper">
             <a
               href="mailto:josh@imjoshnewton.me?Subject=From%20imjoshnewton.me"
