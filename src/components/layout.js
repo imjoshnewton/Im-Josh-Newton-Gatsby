@@ -18,6 +18,7 @@ import {
   faBars,
   faPhone,
   faEnvelope,
+  faCamera,
 } from "@fortawesome/free-solid-svg-icons"
 
 // import ScrollAnimation from "react-animate-on-scroll"
@@ -33,8 +34,11 @@ library.add(
   faAngleDown,
   faBars,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faCamera
 )
+
+console.log("library", library)
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require

@@ -10,21 +10,26 @@ class Footer extends Component {
         <ScrollAnimation animateIn="fadeInRight">
           <h1 className="fadeInRight">SOCIAL</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInRight">
-          <div className="wrapper fadeIn">
-            <a href="https://facebook.com/newtonjd1" target="_blank">
+        <ScrollAnimation animateIn="fadeIn">
+          <div className="wrapper">
+            <a href="https://facebook.com/newtonjd1" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={["fab", "facebook-square"]} />
               <i className="fa fa-facebook-square" aria-hidden="true"></i>
             </a>
-            <a href="https://twitter.com/imjoshnewton" target="_blank">
+            <a href="https://twitter.com/imjoshnewton" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={["fab", "twitter-square"]} />
               <i className="fa fa-twitter-square" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/newtonjosh" target="_blank">
+            <a href="https://www.linkedin.com/in/newtonjosh" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
               <i className="fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
-            <a href="https://instagram.com/imjoshnewton" target="_blank">
+            <a href="https://instagram.com/imjoshnewton" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
               <i className="fa fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://unsplash.com/@imjoshnewton" target="_blank">
+            <a href="https://unsplash.com/@imjoshnewton" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon="camera" />
               <i className="fa fa-camera" aria-hidden="true"></i>
             </a>
           </div>

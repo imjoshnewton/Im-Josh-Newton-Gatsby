@@ -10,8 +10,8 @@ class Connect extends Component {
         <ScrollAnimation animateIn="fadeInRight">
           <h1 className=" fadeInRight">CONTACT</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
-          <div className="wrapper fadeIn">
+        <ScrollAnimation animateIn="fadeIn" offset={150}>
+          <div className="wrapper">
             <a
               href="mailto:josh@imjoshnewton.me?Subject=From%20imjoshnewton.me"
               target="_top"
