@@ -53,7 +53,12 @@ class Nav extends React.Component {
         transition: "filter 0.5s ease",
       },
     }
-    const menu = ["About", "More", "Connect"]
+    const menu = [
+      { link: "About", path: "/#About" },
+      { link: "More", path: "/#More" },
+      { link: "Connect", path: "/#Connect" },
+      { link: "Blog", path: "/blog/hello-world" },
+    ]
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
@@ -67,7 +72,7 @@ class Nav extends React.Component {
         </MenuItem>
       )
     })
-
+    // console.log('menu', menu[0]);
     return (
       <div>
         <div style={styles.container}>
@@ -126,7 +131,7 @@ class MenuItem extends React.Component {
     }
     return (
       <div style={styles.container}>
-        <Link to={"/#" + this.props.children}>
+        <Link to={this.props.children.path}>
           <div
             style={styles.menuItem}
             onMouseEnter={() => {
@@ -137,7 +142,7 @@ class MenuItem extends React.Component {
             }}
             onClick={this.props.onClick}
           >
-            {this.props.children}
+            {this.props.children.link}
           </div>
         </Link>
         <div style={styles.line} />

@@ -9,7 +9,12 @@ class Section extends Component {
           <h1>{this.props.sectionTitle}</h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-          <div className="wrapper">{this.props.children}</div>
+          <div
+            className="wrapper"
+            dangerouslySetInnerHTML={{
+              __html: this.props.children,
+            }}
+          ></div>
         </ScrollAnimation>
       </section>
     )

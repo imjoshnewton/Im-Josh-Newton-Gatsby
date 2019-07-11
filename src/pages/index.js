@@ -8,36 +8,8 @@ import Connect from "../components/connect"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 
-import "animate.css/animate.min.css"
-
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      contentfulPage(pageTitle: { eq: "Home" }) {
-        pageTitle
-        section1Title
-        section1 {
-          content {
-            content {
-              value
-              nodeType
-            }
-          }
-        }
-        section2Title
-        section2 {
-          content {
-            content {
-              value
-              nodeType
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  // console.log('data', data);
+const IndexPage = ({ data }) => {
+  console.log("data", data)
 
   return (
     <Layout>
@@ -48,10 +20,11 @@ const IndexPage = () => {
         sectionTitle={data.contentfulPage.section1Title}
         background="dark"
       >
-        {data.contentfulPage.section1.content.map((content, index, arr) => {
+        {data.contentfulPage.section1Content.childMarkdownRemark.html}
+        {/*data.contentfulPage.section1.content.map((content, index, arr) => {
           return <p key={index}>{content.content[0].value}</p>
-        })}
-        <p>I'm Josh Newton.</p>
+        })*/}
+        {/*<p>I'm Josh Newton.</p>  
         <p>
           I work with companies and individuals to create high-performing teams
           and leaders by identifying people's unique design. I also host a
@@ -68,14 +41,15 @@ const IndexPage = () => {
           that is their value proposition and contribution to the world. My
           passion is helping people find what that is and put their potential
           into practice.
-        </p>
+        </p>*/}
       </Section>
       <Section
         id={data.contentfulPage.section2Title}
         sectionTitle={data.contentfulPage.section2Title}
         background="light"
       >
-        <p>
+        {data.contentfulPage.section2Content.childMarkdownRemark.html}
+        {/*<p>
           I began the journey of figuring out who I was in college. I first
           started thinking about who I was and what that ment when I found
           myself in a practice room with a saxophone in my hands, staring at a
@@ -114,12 +88,32 @@ const IndexPage = () => {
           My journey has primarily been figuring out what I don't want to do. I
           can easily get excited about a new opportunity or a new cance to learn
           something.
-        </p>
+        </p>*/}
       </Section>
       <Connect />
       <Footer />
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    contentfulPage(pageTitle: { eq: "Home" }) {
+      pageTitle
+      section1Title
+      section2Title
+      section1Content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      section2Content {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
