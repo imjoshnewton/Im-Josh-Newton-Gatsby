@@ -15,7 +15,11 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, "data.site.siteMetadata.title")
 
     return (
-      <Layout siteTite={siteTitle} location={this.props.location} showTitle={true}>
+      <Layout
+        siteTite={siteTitle}
+        location={this.props.location}
+        showTitle={true}
+      >
         <div>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>

@@ -3,8 +3,8 @@ import React from "react"
 // import ScrollAnimation from "react-animate-on-scroll"
 
 const Header = ({ siteTitle, location, showTitle }) => {
-  return <Nav siteTitle={siteTitle} location={location} 
-  showTitle={showTitle} />
+  // console.log('showTitle', showTitle);
+  return <Nav siteTitle={siteTitle} location={location} showTitle={showTitle} />
 }
 
 /* App.jsx */
@@ -82,12 +82,16 @@ class Nav extends React.Component {
     return (
       <div>
         <div style={styles.container}>
+          {this.props.showTitle ? (
+            <div style={styles.logo}>{this.props.siteTitle}</div>
+          ) : (
+            <div />
+          )}
           <MenuButton
             open={this.state.menuOpen}
             onClick={() => this.handleMenuClick()}
             color="white"
           />
-          {this.props.showTitle ? <div style={styles.logo}>Logo</div> : <div />}
         </div>
         <Menu open={this.state.menuOpen}>{menuItems}</Menu>
       </div>

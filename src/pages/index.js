@@ -13,8 +13,11 @@ const IndexPage = ({ data, location }) => {
   // console.log("location", location)
 
   return (
-    <Layout siteTitle={data.site.siteMetadata.title} location={location}
-    showTitle={false} >
+    <Layout
+      siteTitle={data.site.siteMetadata.title}
+      location={location}
+      showTitle={false}
+    >
       <SEO title="Home" />
       <Hero />
       <Section

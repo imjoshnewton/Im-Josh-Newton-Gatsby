@@ -45,7 +45,7 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, showTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -58,7 +58,11 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} location={location} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        location={location}
+        showTitle={showTitle}
+      />
       <div
         style={{
           margin: `0 auto`,
