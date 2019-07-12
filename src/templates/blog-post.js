@@ -38,7 +38,7 @@ class BlogPostTemplate extends React.Component {
               }}
             />
           </div>
-        </div>
+        </section>
       </Layout>
     )
   }
