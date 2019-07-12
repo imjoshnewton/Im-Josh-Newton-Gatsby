@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <section className="container body">
+        <div>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>
             <Img
@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
               fluid={post.heroImage.fluid}
             />
           </div>
-          <div className="wrapper">
+          <div className="container body">
             <h1 className="section-headline">{post.title}</h1>
             <p
               style={{
@@ -32,13 +32,13 @@ class BlogPostTemplate extends React.Component {
             >
               {post.publishDate}
             </p>
-            <div
+            <div className="wrapper"
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
               }}
             />
           </div>
-        </section>
+        </div>
       </Layout>
     )
   }
