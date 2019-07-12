@@ -14,7 +14,7 @@ const BlogIndex = () => {
               description
             }
             title
-            publishDate
+            publishDate(formatString: "MMMM Do, YYYY")
             slug
             heroImage {
               fluid {
