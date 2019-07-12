@@ -8,7 +8,7 @@ const BlogIndex = () => {
     query last10Posts {
       allContentfulBlogPost(
         limit: 10
-        sort: { fields: [edges___node___publishDate], order: DESC }
+        sort: { fields: [publishDate], order: DESC }
         ){
         totalCount
         edges {
