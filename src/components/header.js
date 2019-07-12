@@ -14,7 +14,7 @@ class Nav extends React.Component {
       menuOpen: false,
       path: props.location.pathname,
     }
-    console.log("nav state", this.state.path)
+    //console.log("nav state", this.state.path)
   }
 
   handleMenuClick() {
@@ -66,7 +66,7 @@ class Nav extends React.Component {
       { link: "Blog", path: "/#Blog" },
       { link: "Connect", path: `${this.state.path}#Connect` },
     ]
-    console.log("props", this.props)
+    // console.log("props", this.props)
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
