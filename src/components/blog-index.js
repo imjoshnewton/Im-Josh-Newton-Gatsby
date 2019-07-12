@@ -33,11 +33,13 @@ const BlogIndex = () => {
       <h1>Blog</h1>
       <div className="wrapper">
         {posts.map((node, index) => {
+          const post = node.node;
+          
           return (
             <div key={index}>
-              <Link to={node.slug}><h3>node.title</h3></Link>
-              <small>node.publishDate</small>
-            <p>node.description.description</p>
+              <Link to={post.slug}><h3>{post.title}</h3></Link>
+              <small>{post.publishDate}</small>
+            <p>{post.description.description}</p>
             </div>
           )
         })}
