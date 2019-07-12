@@ -43,10 +43,10 @@ class Nav extends React.Component {
         justifyContent: "flex-end",
         width: "100%",
         color: "white",
-        fontFamily: "Lobster",
+        fontFamily: "Amiko",
       },
       logo: {
-        margin: "0 auto",
+        margin: "0 1rem",
       },
       body: {
         display: "flex",
