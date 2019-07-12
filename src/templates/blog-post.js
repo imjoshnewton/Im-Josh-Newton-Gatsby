@@ -4,6 +4,8 @@ import Helmet from "react-helmet"
 import get from "lodash/get"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import Connect from "../components/connect"
+import Footer from "../components/footer"
 
 import heroStyles from "../components/blog-hero.module.css"
 
@@ -39,6 +41,8 @@ class BlogPostTemplate extends React.Component {
             />
           </div>
         </div>
+        <Connect />
+        <Footer />
       </Layout>
     )
   }
