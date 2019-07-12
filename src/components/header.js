@@ -40,12 +40,13 @@ class Nav extends React.Component {
         opacity: 0.9,
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         width: "100%",
         color: "white",
       },
       logo: {
         margin: "0 1rem",
+        alignSelf: "flex-start",
       },
       body: {
         display: "flex",
