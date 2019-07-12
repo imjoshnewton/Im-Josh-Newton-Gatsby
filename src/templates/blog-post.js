@@ -34,7 +34,8 @@ class BlogPostTemplate extends React.Component {
             >
               {post.publishDate}
             </p>
-            <div className="wrapper"
+            <div
+              className="wrapper"
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
               }}

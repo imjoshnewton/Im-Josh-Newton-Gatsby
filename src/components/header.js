@@ -3,7 +3,7 @@ import React from "react"
 // import ScrollAnimation from "react-animate-on-scroll"
 
 const Header = ({ siteTitle, location }) => {
-  return <Nav location={location}/>
+  return <Nav location={location} />
 }
 
 /* App.jsx */
@@ -14,7 +14,7 @@ class Nav extends React.Component {
       menuOpen: false,
       path: props.location.pathname,
     }
-    console.log('nav state', this.state.path);
+    console.log("nav state", this.state.path)
   }
 
   handleMenuClick() {
@@ -60,13 +60,13 @@ class Nav extends React.Component {
       },
     }
     const menu = [
-      { link: "Home", path: "/"},
+      { link: "Home", path: "/" },
       { link: "About", path: "/#About" },
       { link: "More", path: "/#More" },
       { link: "Blog", path: "/#Blog" },
-      { link: "Connect", path: `${this.state.path}#Connect`},
+      { link: "Connect", path: `${this.state.path}#Connect` },
     ]
-    console.log('props',this.props);
+    console.log("props", this.props)
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
