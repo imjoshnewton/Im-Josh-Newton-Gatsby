@@ -38,7 +38,7 @@ library.add(
   faCamera
 )
 
-console.log("library", library)
+// console.log("library", library)
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
