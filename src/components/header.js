@@ -2,8 +2,9 @@ import { Link } from "gatsby"
 import React from "react"
 // import ScrollAnimation from "react-animate-on-scroll"
 
-const Header = ({ siteTitle, location }) => {
-  return <Nav location={location} />
+const Header = ({ siteTitle, location, showTitle }) => {
+  return <Nav siteTitle={siteTitle} location={location} 
+  showTitle={showTitle} />
 }
 
 /* App.jsx */
@@ -22,9 +23,7 @@ class Nav extends React.Component {
   }
 
   handleLinkClick(val) {
-    // const navLink = "#"+val;
     this.setState({ menuOpen: false })
-    // navigate(navLink);
   }
 
   componentDidMount(location) {
@@ -80,7 +79,6 @@ class Nav extends React.Component {
         </MenuItem>
       )
     })
-    // console.log('menu', menu[0]);
     return (
       <div>
         <div style={styles.container}>
@@ -89,7 +87,7 @@ class Nav extends React.Component {
             onClick={() => this.handleMenuClick()}
             color="white"
           />
-          {/*<div style={styles.logo}>Logo</div>*/}
+          {this.props.showTitle ? <div style={styles.logo}>Logo</div> : <div />}
         </div>
         <Menu open={this.state.menuOpen}>{menuItems}</Menu>
       </div>

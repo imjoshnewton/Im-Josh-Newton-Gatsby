@@ -13,7 +13,8 @@ const IndexPage = ({ data, location }) => {
   // console.log("location", location)
 
   return (
-    <Layout location={location}>
+    <Layout siteTitle={data.site.siteMetadata.title} location={location}
+    showTitle={false} >
       <SEO title="Home" />
       <Hero />
       <Section
@@ -39,6 +40,11 @@ const IndexPage = ({ data, location }) => {
 
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     contentfulPage(pageTitle: { eq: "Home" }) {
       pageTitle
       section1Title
