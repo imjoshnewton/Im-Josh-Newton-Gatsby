@@ -6,6 +6,7 @@ import Hero from "../components/hero"
 import Section from "../components/section"
 import Connect from "../components/connect"
 import Footer from "../components/footer"
+import BlogIndex from "../components/blog-index"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
@@ -90,6 +91,7 @@ const IndexPage = ({ data }) => {
           something.
         </p>*/}
       </Section>
+      <BlogIndex />
       <Connect />
       <Footer />
     </Layout>
