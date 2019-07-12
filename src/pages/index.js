@@ -10,7 +10,7 @@ import BlogIndex from "../components/blog-index"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
-  console.log("data", data)
+  // console.log("data", data)
 
   return (
     <Layout>

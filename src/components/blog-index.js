@@ -26,6 +26,7 @@ const BlogIndex = () => {
 }
   `)
   const posts = data.allContentfulBlogPost.edges;
+  console.log("posts", posts);
 
   return (
     <section className="container body">
