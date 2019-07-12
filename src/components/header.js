@@ -46,7 +46,7 @@ class Nav extends React.Component {
       },
       logo: {
         margin: "0 1rem",
-        alignSelf: "flex-start",
+        justifySelf: "start",
       },
       body: {
         display: "flex",
