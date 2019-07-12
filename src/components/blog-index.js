@@ -6,7 +6,10 @@ import ScrollAnimation from "react-animate-on-scroll"
 const BlogIndex = () => {
   const data = useStaticQuery(graphql`
     query last10Posts {
-      allContentfulBlogPost(limit: 10) {
+      allContentfulBlogPost(
+        limit: 10
+        sort: { fields: [edges___node___publishDate], order: DESC }
+        ){
         totalCount
         edges {
           node {
