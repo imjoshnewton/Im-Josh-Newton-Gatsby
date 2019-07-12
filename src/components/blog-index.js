@@ -37,7 +37,7 @@ const BlogIndex = () => {
           
           return (
             <div key={index}>
-              <Link to={post.slug}><h3>{post.title}</h3></Link>
+              <Link to={"/blog" + {post.slug}}><h3>{post.title}</h3></Link>
               <small>{post.publishDate}</small>
             <p>{post.description.description}</p>
             </div>
