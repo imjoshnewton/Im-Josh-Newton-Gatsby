@@ -7,12 +7,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-// CodeKit
-//@import "bourbon", "bitters/base";
-// Manual
-@import "bourbon/bourbon";
-@import "base/base";
-@import "neat/neat";
+// Bourbon and Bitters 🥃
+@import "../styles/bourbon/bourbon";
+@import "../styles/base/base";
 
 // Fonts
 
@@ -38,6 +35,7 @@ $darkgrey70: rgba(5%, 5%, 5%, 0.7);
 $antiquewhite: #f2ebea;
 $darkgrey: #333;
 $darkgrey-rgba: rgba(21, 21, 21, 0.5);
+$wintergreendream: #587b7f;
 $grey-overlay: linear-gradient($darkgrey-rgba, $darkgrey-rgba);
 
 // Gradient Stops
@@ -59,11 +57,14 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $wintergreendream;
 
   &:hover {
-    color: inherit;
-    //opacity: .7;
+    opacity: .85;
+  }
+
+  &:active, &:focus, &:hover {
+    color: lighten( $wintergreendream, 15% );
   }
   /*&:active {
     opacity: .5;

@@ -31,6 +31,15 @@ const BlogIndex = () => {
   `)
   const posts = data.allContentfulBlogPost.edges
   console.log("posts", posts)
+  const styles = {
+    container: {},
+    title: {
+      color: "#f2ebea",
+      textTransform: "uppercase",
+    },
+    date: {},
+    description: {},
+  }
 
   return (
     <section id="Blog" className="container body">
@@ -43,12 +52,12 @@ const BlogIndex = () => {
             const post = node.node
 
             return (
-              <div key={index}>
+              <div key={index} style={styles.container}>
                 <Link to={`/blog/${post.slug}`}>
-                  <h3>{post.title}</h3>
+                  <h3 style={styles.title}>{post.title}</h3>
                 </Link>
-                <small>{post.publishDate}</small>
-                <p>{post.description.description}</p>
+                <small style={styles.data}>{post.publishDate}</small>
+                <p style={styles.description}>{post.description.description}</p>
               </div>
             )
           })}

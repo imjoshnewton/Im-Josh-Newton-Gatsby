@@ -55,6 +55,10 @@ class Nav extends React.Component {
       logo: {
         margin: "0 1rem",
         textTransform: "uppercase",
+        color: "white",
+      },
+      link: {
+        color: "white",
       },
       body: {
         display: "flex",
@@ -92,7 +96,9 @@ class Nav extends React.Component {
         <div className="animated bounceInDown" style={styles.container}>
           {this.props.showTitle ? (
             <div style={styles.logo}>
-              <Link to="/">{this.props.siteTitle}</Link>
+              <Link to="/" style={styles.link}>
+                {this.props.siteTitle}
+              </Link>
             </div>
           ) : (
             <div />
