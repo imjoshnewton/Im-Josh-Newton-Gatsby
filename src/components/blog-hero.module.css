@@ -35,9 +35,15 @@
   }
 }
 
-@media(min-width: 980px) {
+@media(min-width: 1000px) {
   .heroDetails {
     font-size: 20px;
+  }
+}
+
+@media(max-width: 980px) {
+  .heroDetails {
+    margin: 5% 7.5%;
   }
 }
 
