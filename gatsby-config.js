@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `I'm Josh Newton`,
-    description: `Personal site of Josh Newton.`,
+    description: `The personal site of Josh Newton.`,
     author: `@imjoshnewton`,
   },
   plugins: [
@@ -31,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-source-unsplash`,
       options: {
-        appId: `0b635e51b4da768609d6f2147a2b3a8e095d978ec6666b059c0b02c182919eba`,
+        appId: process.env.UNSPLASH_APP_ID, // `0b635e51b4da768609d6f2147a2b3a8e095d978ec6666b059c0b02c182919eba`,
         collections: [`6768256`],
         // optional: will only get page 1, so increase this count to include > 10 photos
         perPage: `100`,
@@ -40,9 +44,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `gvsclgjjlth9`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID, //`gvsclgjjlth9`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: "RJzxZdxGxBdY-l9N1OfJhRDSYHRBDor6xEuYuTxnpbM",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, //"RJzxZdxGxBdY-l9N1OfJhRDSYHRBDor6xEuYuTxnpbM",
       },
     },
     {
