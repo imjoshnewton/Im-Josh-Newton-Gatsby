@@ -4,7 +4,14 @@ import React from "react"
 
 const Header = ({ siteTitle, location, showTitle }) => {
   // console.log('showTitle', showTitle);
-  return <Nav siteTitle={siteTitle} location={location} showTitle={showTitle} />
+  return (
+    <Nav
+      className="animated bounceInDown"
+      siteTitle={siteTitle}
+      location={location}
+      showTitle={showTitle}
+    />
+  )
 }
 
 /* App.jsx */
@@ -43,9 +50,11 @@ class Nav extends React.Component {
         justifyContent: "space-between",
         width: "100%",
         color: "white",
+        background: this.props.showTitle ? "rgba(25,25,25,0.5)" : null,
       },
       logo: {
         margin: "0 1rem",
+        textTransform: "uppercase",
       },
       body: {
         display: "flex",
@@ -80,9 +89,11 @@ class Nav extends React.Component {
     })
     return (
       <div>
-        <div style={styles.container}>
+        <div className="animated bounceInDown" style={styles.container}>
           {this.props.showTitle ? (
-            <div style={styles.logo}>{this.props.siteTitle}</div>
+            <div style={styles.logo}>
+              <Link to="/">{this.props.siteTitle}</Link>
+            </div>
           ) : (
             <div />
           )}
@@ -237,8 +248,6 @@ class MenuButton extends React.Component {
         cursor: "pointer",
         padding: "4px",
         margin: "0.5rem",
-        // animation: "slideInDown 1.15s ease-in-out .25s 1 forwards",
-        // transform: "translateY(-150%)",
       },
       line: {
         height: "2px",
@@ -263,7 +272,6 @@ class MenuButton extends React.Component {
     }
     return (
       <div
-        className="animated bounceInDown"
         style={styles.container}
         onClick={
           this.props.onClick

@@ -9,7 +9,7 @@ const BlogIndex = () => {
       allContentfulBlogPost(
         limit: 10
         sort: { fields: [publishDate], order: DESC }
-        ){
+      ) {
         totalCount
         edges {
           node {
