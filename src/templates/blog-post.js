@@ -28,16 +28,20 @@ class BlogPostTemplate extends React.Component {
               alt={post.title}
               fluid={post.heroImage.fluid}
             />
+            <div className={heroStyles.heroDetails}>
+              <h1 className={heroStyles.heroHeadline}>{post.title}</h1>
+              <small>{post.publishDate}</small>
+            </div>
           </div>
           <div className="container body">
-            <h1 className="section-headline">{post.title}</h1>
+            {/*<h1 className="section-headline">{post.title}</h1>
             <p
               style={{
                 display: "block",
               }}
             >
               {post.publishDate}
-            </p>
+            </p>*/}
             <div
               className="wrapper"
               dangerouslySetInnerHTML={{
