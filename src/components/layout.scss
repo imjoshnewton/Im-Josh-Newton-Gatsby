@@ -6,26 +6,21 @@
 //		Notes:	Implimenting Bourbon and Bitters - Added Bourbon and Bitters
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 // Bourbon and Bitters 🥃
 @import "../styles/bourbon/bourbon";
 @import "../styles/base/base";
 
 // Fonts
-
 $base-font-family: "Montserrat", sans-serif;
 $heading-font-family: "Amiko", sans-serif;
 
 // Font Sizes
-
 $large-font: 2.75em;
 $small-font: 1em;
-
 $large-icons: 3em;
 $medium-icons: 2.5em;
 
 // Colors
-
 $white: #fff;
 $white80: rgba(100%, 100%, 100%, 0.8);
 $white85: rgba(255, 255, 255, 0.85);
@@ -39,12 +34,10 @@ $wintergreendream: #587b7f;
 $grey-overlay: linear-gradient($darkgrey-rgba, $darkgrey-rgba);
 
 // Gradient Stops
-
 $neutral-white-background: $white80, $white90;
 $neutral-grey-background: $grey60, $darkgrey70;
 
 //shapes
-
 $triangle: polygon(0 0, 0 100%, 100% 0);
 $rect: polygon(0 100%, 100% 0, 100% 100%);
 
@@ -56,23 +49,25 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: $wintergreendream;
+  text-decoration: none;
 
   &:hover {
-    opacity: .85;
+    opacity: 0.85;
   }
 
-  &:active, &:focus, &:hover {
-    color: lighten( $wintergreendream, 15% );
+  &:active,
+  &:focus,
+  &:hover {
+    color: lighten($wintergreendream, 15%);
   }
-  /*&:active {
-    opacity: .5;
-  }
-
-  &:visited {
-    color: $darkgrey;
-  }*/
+  // &:active {
+  //   opacity: .5;
+  // }
+  //
+  // &:visited {
+  //   color: $darkgrey;
+  // }
 }
 
 h1 {
@@ -100,102 +95,6 @@ ul {
   font-size: $small-font;
   font-weight: normal;
   text-align: left;
-}
-
-.wow {
-  visibility: hidden;
-}
-
-.menu {
-  @include position(absolute, 0 0 null null);
-  align-items: flex-end;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-
-  svg {
-    @include position(fixed, 15px 15px null null);
-    @include size(auto);
-    //animation: slideInDown .75s ease-in-out .5s 1 forwards;
-    color: $white;
-    cursor: pointer;
-    // font-size: 1.75rem;
-    padding: 7.55px 10px;
-    text-align: right;
-    transition: all 250ms ease-in-out;
-    z-index: 10;
-  }
-
-  &.open {
-    svg {
-      right: 147px;
-    }
-
-    ul {
-      right: 0;
-    }
-
-    a svg {
-      right: 0;
-    }
-  }
-
-  ul {
-    @include position(fixed, 0 -132px null null);
-    background-color: $white85;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    min-height: 100vh;
-    padding: 17.5px 0;
-    transition: all 250ms ease-in-out;
-    z-index: 10;
-
-    li {
-      color: $darkgrey;
-      cursor: pointer;
-      padding: 10px 15px;
-      text-align: left;
-      transition: all 250ms ease-in-out;
-
-      &:last-child {
-        @include position(absolute, null null 40px 25%);
-        text-align: center;
-      }
-
-      svg {
-        @include position(relative, null 0 null null);
-        color: $darkgrey;
-        font-weight: 500;
-      }
-
-      a {
-        color: $darkgrey;
-        font-family: $heading-font-family;
-        font-size: 1.25rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        transition: all 150ms ease-in-out;
-
-        &:hover {
-          opacity: 0.7;
-        }
-
-        &:visited {
-          color: $darkgrey;
-        }
-
-        svg {
-          color: $darkgrey;
-          font-weight: 500;
-          position: relative;
-          right: 0;
-        }
-      }
-    }
-  }
 }
 
 .container {
@@ -257,11 +156,9 @@ ul {
       flex-direction: row;
       justify-content: flex-end;
       opacity: 0.75;
-
       //&:last-of-type {
       //	margin-top: 1rem;
       //}
-
       a {
         margin-left: 1.75rem;
         margin-bottom: 1rem;
@@ -432,7 +329,6 @@ ul {
     }
   }
 }
-
 // List Roll Code
 
 .listroll {
@@ -480,6 +376,7 @@ ul {
           transform: rotate(0deg);
         }
       }
+
       &:checked ~ .rollcontent {
         visibility: visible;
         opacity: 1;
@@ -495,7 +392,7 @@ ul {
       flex-direction: row;
       flex-wrap: wrap;
       overflow: hidden;
-      max-height: 0px;
+      max-height: 0;
       transform-origin: top;
       transform: rotateX(90deg);
       transition: all 250ms ease-in-out;
@@ -530,7 +427,6 @@ ul {
 }
 
 // Clipper Test
-
 .right-triangle {
   @include position(absolute, 0 null null 0);
   @include size(100%);
@@ -560,41 +456,46 @@ ul {
   0% {
     transform: translateX(-100%);
   }
+
   70% {
     transform: translateX(5%);
   }
+
   85% {
     transform: translateX(-1%);
   }
+
   100% {
     transform: translateX(0%) translateZ(-2px) scale(3);
   }
 }
-
 @keyframes slideInDown {
   0% {
     transform: translateY(-150%);
   }
+
   70% {
     transform: translateY(5%);
   }
+
   85% {
     transform: translateY(-1%);
   }
+
   100% {
     transform: translateY(0%);
   }
 }
-
 @keyframes headerImageRotateDT {
   0%,
-  15%,
-  100% {
+  100%,
+  15% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
       url("https://source.unsplash.com/igmaRVtMhqg/1280x720") no-repeat center
         center;
     background-size: cover;
   }
+
   20%,
   35% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -602,6 +503,7 @@ ul {
         center;
     background-size: cover;
   }
+
   40%,
   55% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -609,6 +511,7 @@ ul {
         center;
     background-size: cover;
   }
+
   60%,
   75% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -616,6 +519,7 @@ ul {
         center;
     background-size: cover;
   }
+
   80%,
   95% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -624,16 +528,16 @@ ul {
     background-size: cover;
   }
 }
-
 @keyframes headerImageRotateMB {
   0%,
-  15%,
-  100% {
+  100%,
+  15% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
       url("https://source.unsplash.com/igmaRVtMhqg/853x481") no-repeat center
         center;
     background-size: cover;
   }
+
   20%,
   35% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -641,6 +545,7 @@ ul {
         center;
     background-size: cover;
   }
+
   40%,
   55% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -648,6 +553,7 @@ ul {
         center;
     background-size: cover;
   }
+
   60%,
   75% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -655,6 +561,7 @@ ul {
         center;
     background-size: cover;
   }
+
   80%,
   95% {
     background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
@@ -663,50 +570,50 @@ ul {
     background-size: cover;
   }
 }
-
 @keyframes headerImageRotate {
   0%,
-  30%,
-  100% {
+  100%,
+  30% {
     opacity: 0;
   }
-  5%,
-  25% {
+
+  25%,
+  5% {
     opacity: 1;
   }
 }
-
 @keyframes upAndDown {
   0% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(5px);
   }
 }
-
 @keyframes appear {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
-
 @keyframes slideIn {
   0% {
     transform: translateX(-2%);
   }
+
   100% {
     transform: translateX(0);
   }
 }
-
 @keyframes shrink {
   0% {
     width: 95%;
   }
+
   100% {
     width: 90%;
   }
@@ -720,9 +627,11 @@ ul {
       }
     }
   }
+
   .container {
     &.header {
       min-height: 98vh;
+
       .bg {
         background-attachment: scroll !important;
       }
@@ -743,6 +652,7 @@ ul {
 
       .wrapper {
         justify-content: center;
+
         a {
           margin-left: 1rem;
         }
@@ -769,8 +679,8 @@ ul {
   #Connect {
     align-items: center;
 
-    h1,
-    .wrapper {
+    .wrapper,
+    h1 {
       text-align: center;
       justify-content: center;
     }

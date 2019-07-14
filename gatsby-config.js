@@ -33,6 +33,13 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Amiko`, `Montserrat`],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-unsplash`,
       options: {
         appId: process.env.UNSPLASH_APP_ID, // `0b635e51b4da768609d6f2147a2b3a8e095d978ec6666b059c0b02c182919eba`,
