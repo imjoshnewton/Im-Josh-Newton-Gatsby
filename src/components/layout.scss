@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 //		SASS for imjoshnewton.me
-//		Version: 1.6.2
-//		Updated: 3/5/17
+//		Version: 1.6.3
+//		Updated: 7/16/19
 //		Notes:	Implimenting Bourbon and Bitters - Added Bourbon and Bitters
 //
 ////////////////////////////////////////////////////////////////////////////////
@@ -31,6 +31,7 @@ $antiquewhite: #f2ebea;
 $darkgrey: #333;
 $darkgrey-rgba: rgba(21, 21, 21, 0.5);
 $wintergreendream: #587b7f;
+$shadowblue: #7c90a0;
 $grey-overlay: linear-gradient($darkgrey-rgba, $darkgrey-rgba);
 
 // Gradient Stops
@@ -43,13 +44,14 @@ $rect: polygon(0 100%, 100% 0, 100% 100%);
 
 body {
   color: $antiquewhite;
+  font-display: swap;
   font-family: $base-font-family;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: $wintergreendream;
+  color: $shadowblue;
   text-decoration: none;
 
   &:hover {
@@ -59,15 +61,16 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: lighten($wintergreendream, 15%);
+    color: lighten($shadowblue, 15%);
   }
-  // &:active {
-  //   opacity: .5;
-  // }
-  //
-  // &:visited {
-  //   color: $darkgrey;
-  // }
+
+  &:active {
+    opacity: .5;
+  }
+
+  &:visited {
+    color: $wintergreendream;
+  }
 }
 
 h1 {
