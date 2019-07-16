@@ -45,6 +45,13 @@ class Hero extends Component {
       bgImage4 = this.props.data.bgImage4.localFile.childImageSharp.fluid,
       bgImage5 = this.props.data.bgImage5.localFile.childImageSharp.fluid
 
+    // For slow internet connections
+    // const bgImage1 = this.props.data.bgImage1.childImageSharp.fluid,
+    //   bgImage2 = this.props.data.bgImage2.childImageSharp.fluid,
+    //   bgImage3 = this.props.data.bgImage3.childImageSharp.fluid,
+    //   bgImage4 = this.props.data.bgImage4.childImageSharp.fluid,
+    //   bgImage5 = this.props.data.bgImage5.childImageSharp.fluid
+
     return (
       <header id="header" style={styles.header} className="container header">
         <Img fluid={bgImage1} style={styles.bg} className="bg" />
@@ -76,6 +83,7 @@ Hero.defaultProps = {
   height: "800px",
 }
 
+// For faster internet and deployment
 export default props => (
   <StaticQuery
     query={graphql`
@@ -140,3 +148,49 @@ export default props => (
     render={data => <Hero data={data} {...props} />}
   />
 )
+
+// For slow internet connections
+// export default props => (
+//   <StaticQuery
+//     query={graphql`
+//       {
+//         bgImage1: file(relativePath: { eq: "chicago-skyline.jpeg" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//         bgImage2: file(relativePath: { eq: "parking-meeters.jpeg" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//         bgImage3: file(relativePath: { eq: "golden-sunrise.jpeg" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//         bgImage4: file(relativePath: { eq: "black-and-white-windows.jpeg" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//         bgImage5: file(relativePath: { eq: "canon-film-camera.jpeg" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => <Hero data={data} {...props} />}
+//   />
+// )

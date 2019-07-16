@@ -33,12 +33,20 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        fonts: [`Amiko`, `Montserrat`],
-        display: "swap",
+        google: {
+          families: ["Amiko", "Montserrat"],
+        },
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Amiko`, `Montserrat`],
+    //     display: "swap",
+    //   },
+    // },
     {
       resolve: `gatsby-source-unsplash`,
       options: {

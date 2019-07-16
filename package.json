@@ -19,6 +19,7 @@
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.2",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.1.8",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-source-unsplash": "^1.1.0",
@@ -46,8 +47,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop -H $HOSTNAME -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run format && npm run develop",
+    "start": "npm run format && npm run clean && npm run develop",
     "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
