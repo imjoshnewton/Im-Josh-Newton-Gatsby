@@ -11,18 +11,18 @@ class Hero extends Component {
   }
 
   componentDidMount() {
-    this.setState({ height: window.innerHeight + 50 + "px" })
+    this.setState({ height: window.innerHeight + 30 + "px" })
   }
 
   render() {
-    // console.log("data", this.props.data)
+    console.log("props", this.props)
     const styles = {
       header: {
         minHeight: this.state.height,
       },
       bg: {
-        minHeight: this.state.height,
-        maxHeight: this.state.height,
+        height: this.state.height,
+        // maxHeight: "800px",
         position: "fixed",
         opacity: "0",
         willChange: "opacity",
@@ -36,7 +36,7 @@ class Hero extends Component {
         justifyContent: "center",
         flexDirection: "column",
         background:
-          "linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5))",
+          "linear-gradient(rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0.6))",
       },
     }
     const bgImage1 = this.props.data.bgImage1.localFile.childImageSharp.fluid,
@@ -52,6 +52,12 @@ class Hero extends Component {
     //   bgImage4 = this.props.data.bgImage4.childImageSharp.fluid,
     //   bgImage5 = this.props.data.bgImage5.childImageSharp.fluid
 
+    // const bgImage1 = this.props.heroImages[0].fluid,
+    //   bgImage2 = this.props.heroImages[1].fluid,
+    //   bgImage3 = this.props.heroImages[2].fluid,
+    //   bgImage4 = this.props.heroImages[3].fluid,
+    //   bgImage5 = this.props.heroImages[4].fluid
+
     return (
       <header id="header" style={styles.header} className="container header">
         <Img fluid={bgImage1} style={styles.bg} className="bg" />
@@ -61,18 +67,35 @@ class Hero extends Component {
         <Img fluid={bgImage5} style={styles.bg} className="bg" />
 
         <div style={styles.overlayContainer}>
-          <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
-            <Link to="/#About">
-              <h1 id="name">I'M JOSH NEWTON</h1>
-            </Link>
-            <div className="wrapper">
-              <div className="button">
-                <Link to="/#About">
-                  <FontAwesomeIcon icon="angle-down" />
-                </Link>
-              </div>
+          <div className="animated fadeInUp header__title-wrapper">
+            <p className="header___title-pre">Hi,</p>
+            <h1 className="header__title">I'M JOSH NEWTON</h1>
+
+            <p className="header__sub-title">
+              <Link to="/#About" className="header__link">
+                about
+              </Link>
+              <span>&nbsp;-&nbsp;</span>
+              <Link to="/#More" className="header__link">
+                more
+              </Link>
+              <span>&nbsp;-&nbsp;</span>
+              <Link to="/#Blog" className="header__link">
+                blog
+              </Link>
+              <span>&nbsp;-&nbsp;</span>
+              <Link to="/#Connect" className="header__link">
+                connect
+              </Link>
+            </p>
+          </div>
+          {/* <div className="animated fadeInUp wrapper">
+            <div className="button">
+              <Link to="/#About">
+                <FontAwesomeIcon icon="angle-down" />
+              </Link>
             </div>
-          </ScrollAnimation>
+          </div> */}
         </div>
       </header>
     )
@@ -82,6 +105,8 @@ class Hero extends Component {
 Hero.defaultProps = {
   height: "800px",
 }
+
+// export default Hero
 
 // For faster internet and deployment
 export default props => (
@@ -156,35 +181,35 @@ export default props => (
 //       {
 //         bgImage1: file(relativePath: { eq: "chicago-skyline.jpeg" }) {
 //           childImageSharp {
-//             fluid(maxWidth: 300) {
+//             fluid(maxWidth: 1180) {
 //               ...GatsbyImageSharpFluid_withWebp
 //             }
 //           }
 //         }
 //         bgImage2: file(relativePath: { eq: "parking-meeters.jpeg" }) {
 //           childImageSharp {
-//             fluid(maxWidth: 300) {
+//             fluid(maxWidth: 1180) {
 //               ...GatsbyImageSharpFluid_withWebp
 //             }
 //           }
 //         }
 //         bgImage3: file(relativePath: { eq: "golden-sunrise.jpeg" }) {
 //           childImageSharp {
-//             fluid(maxWidth: 300) {
+//             fluid(maxWidth: 1180) {
 //               ...GatsbyImageSharpFluid_withWebp
 //             }
 //           }
 //         }
 //         bgImage4: file(relativePath: { eq: "black-and-white-windows.jpeg" }) {
 //           childImageSharp {
-//             fluid(maxWidth: 300) {
+//             fluid(maxWidth: 1180) {
 //               ...GatsbyImageSharpFluid_withWebp
 //             }
 //           }
 //         }
 //         bgImage5: file(relativePath: { eq: "canon-film-camera.jpeg" }) {
 //           childImageSharp {
-//             fluid(maxWidth: 300) {
+//             fluid(maxWidth: 1180) {
 //               ...GatsbyImageSharpFluid_withWebp
 //             }
 //           }

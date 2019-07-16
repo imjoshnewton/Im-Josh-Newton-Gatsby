@@ -6,7 +6,7 @@ const Header = ({ siteTitle, location, showTitle }) => {
   // console.log('showTitle', showTitle);
   return (
     <Nav
-      className="animated bounceInDown"
+      className="animated fadeInDown"
       siteTitle={siteTitle}
       location={location}
       showTitle={showTitle}
@@ -93,7 +93,7 @@ class Nav extends React.Component {
     })
     return (
       <div>
-        <div className="animated bounceInDown" style={styles.container}>
+        <div className="animated fadeInDown" style={styles.container}>
           {this.props.showTitle ? (
             <div style={styles.logo}>
               <Link to="/" style={styles.link}>

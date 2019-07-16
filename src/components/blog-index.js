@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import ScrollAnimation from "react-animate-on-scroll"
+// import ScrollAnimation from "react-animate-on-scroll"
 // import Img from "gatsby-image"
 
 const BlogIndex = () => {
@@ -43,26 +43,34 @@ const BlogIndex = () => {
 
   return (
     <section id="Blog" className="container body">
-      <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
-        <h1>Blog</h1>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-        <div className="wrapper">
-          {posts.map((node, index) => {
-            const post = node.node
+      {/* <ScrollAnimation
+        animateIn="fadeInRight"
+        animatePreScroll={false}
+        animateOnce={true}
+      > */}
+      <h1>Blog</h1>
+      {/* </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeIn"
+        animatePreScroll={false}
+        animateOnce={true}
+      > */}
+      <div className="wrapper">
+        {posts.map((node, index) => {
+          const post = node.node
 
-            return (
-              <div key={index} style={styles.container}>
-                <Link to={`/blog/${post.slug}`}>
-                  <h3 style={styles.title}>{post.title}</h3>
-                </Link>
-                <small style={styles.data}>{post.publishDate}</small>
-                <p style={styles.description}>{post.description.description}</p>
-              </div>
-            )
-          })}
-        </div>
-      </ScrollAnimation>
+          return (
+            <div key={index} style={styles.container}>
+              <Link to={`/blog/${post.slug}`}>
+                <h3 style={styles.title}>{post.title}</h3>
+              </Link>
+              <small style={styles.data}>{post.publishDate}</small>
+              <p style={styles.description}>{post.description.description}</p>
+            </div>
+          )
+        })}
+      </div>
+      {/* </ScrollAnimation> */}
       {/*<Img fluid={data.placeholderImage.childImageSharp.fluid} />*/}
     </section>
   )

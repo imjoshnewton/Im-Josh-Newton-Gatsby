@@ -19,7 +19,7 @@ const IndexPage = ({ data, location }) => {
       showTitle={false}
     >
       <SEO title="Home" />
-      <Hero />
+      <Hero heroImages={data.contentfulPage.headerImages} />
       <Section
         id={data.contentfulPage.section1Title}
         sectionTitle={data.contentfulPage.section1Title}

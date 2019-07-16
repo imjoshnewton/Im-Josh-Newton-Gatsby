@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import { Link } from "gatsby"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,18 +22,18 @@ const SecondPage = ({ data, location }) => {
 
 export default SecondPage
 
-// export const query = graphql`
-//   {
-//     bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
-//       title
-//       credit
-//       localFile {
-//         childImageSharp {
-//           fluid(maxWidth: 1080) {
-//             ...GatsbyImageSharpFluid_withWebp
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
+      title
+      credit
+      localFile {
+        childImageSharp {
+          fluid(maxWidth: 1080) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  }
+`
