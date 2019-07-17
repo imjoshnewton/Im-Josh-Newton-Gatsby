@@ -103,7 +103,7 @@ class Hero extends Component {
 }
 
 Hero.defaultProps = {
-  height: "1080px",
+  height: "100vh",
 }
 
 // export default Hero
