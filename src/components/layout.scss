@@ -54,7 +54,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    opacity: 0.85;
+    opacity: .85;
   }
 
   &:active,
@@ -64,7 +64,7 @@ a {
   }
 
   &:active {
-    opacity: 0.5;
+    opacity: .5;
   }
 
   &:visited {
@@ -83,11 +83,11 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  margin-top: 0.33em;
+  margin-top: .33em;
 }
 
 h4 {
-  margin-bottom: 0.75em;
+  margin-bottom: .75em;
 }
 
 p,
@@ -118,13 +118,13 @@ ul {
     border-top: 2px solid #eee;
 
     h1 {
-      animation-delay: 0.5s;
+      animation-delay: .5s;
       width: auto;
       text-transform: uppercase;
     }
 
     .wrapper {
-      animation-delay: 0.5s;
+      animation-delay: .5s;
       flex-wrap: wrap;
       justify-content: flex-start;
 
@@ -146,17 +146,17 @@ ul {
     background: $darkgrey;
 
     h1 {
-      animation-delay: 0.5s;
+      animation-delay: .5s;
       width: 100%;
-      opacity: 0.9;
+      opacity: .9;
     }
 
     .wrapper {
-      animation-delay: 0.5s;
+      animation-delay: .5s;
       text-align: right;
       flex-direction: row;
       justify-content: flex-end;
-      opacity: 0.75;
+      opacity: .75;
 
       a {
         margin-left: 1.75rem;
@@ -186,6 +186,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // width: 100%;
   }
 
   @at-root #{&}___title-pre {
@@ -196,29 +197,36 @@ ul {
   @at-root #{&}__title {
     // animation-delay: .25s;
     font-weight: 300;
-    width: 100%;
     z-index: 10;
     font-size: 6rem;
-    margin-bottom: 0.35rem;
-    margin-top: 0.65rem;
+    margin-bottom: .35rem;
+    margin-top: .65rem;
   }
 
   @at-root #{&}__sub-title {
     display: flex;
-    flex: 1;
     font-weight: 400;
     justify-content: space-between;
-    // margin-top: .25rem;
-    //padding: 0 1.5rem;
+    width: 100%;
   }
 
   @at-root #{&}__link {
+    border-bottom-color: rgba(255, 255, 255, 0.298039);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     color: $white;
     margin: 0 1.25rem;
-    text-decoration: underline;
 
     &:visited {
       color: inherit;
+    }
+
+    &:first-of-type {
+      margin-left: .1rem;
+    }
+
+    &:last-of-type {
+      margin-right: .1rem;
     }
   }
 
@@ -332,12 +340,12 @@ ul {
   background: $darkgrey;
 
   h1 {
-    opacity: 0.9;
+    opacity: .9;
   }
 
   .wrapper {
     flex-direction: row;
-    opacity: 0.75;
+    opacity: .75;
 
     a {
       text-decoration: none;
@@ -377,13 +385,13 @@ ul {
       transition: all 150ms ease-in-out;
 
       &:hover {
-        opacity: 0.7;
+        opacity: .7;
         cursor: pointer;
       }
 
       i {
         max-height: 1.25rem;
-        margin: 1em 0.75em 1em 0;
+        margin: 1em .75em 1em 0;
         font-size: 1.25rem;
         transform: rotate(-90deg);
         transition: all 250ms ease-in-out;
@@ -457,8 +465,7 @@ ul {
 .right-triangle {
   @include position(absolute, 0 null null 0);
   @include size(100%);
-  background: linear-gradient($neutral-grey-background),
-    url("https://source.unsplash.com/AVhWn78j_Vw/853x480");
+  background: linear-gradient($neutral-grey-background), url("https://source.unsplash.com/AVhWn78j_Vw/853x480");
   background-size: cover;
   background-attachment: fixed;
   -webkit-clip-path: $triangle;
@@ -468,8 +475,7 @@ ul {
 .fifty-rect {
   @include position(absolute, null 0 0 null);
   @include size(100%);
-  background: linear-gradient($neutral-grey-background),
-    url("https://source.unsplash.com/pdt-XYMku3U/853x480");
+  background: linear-gradient($neutral-grey-background), url("https://source.unsplash.com/pdt-XYMku3U/853x480");
   background-size: cover;
   background-attachment: fixed;
   -webkit-clip-path: $rect;
@@ -515,41 +521,31 @@ ul {
   0%,
   100%,
   15% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/igmaRVtMhqg/1280x720") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/igmaRVtMhqg/1280x720") no-repeat center center;
     background-size: cover;
   }
 
   20%,
   35% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/5D9SyUI3wHU/1280x720") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/5D9SyUI3wHU/1280x720") no-repeat center center;
     background-size: cover;
   }
 
   40%,
   55% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/IZTnVWWbd4U/1280x720") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/IZTnVWWbd4U/1280x720") no-repeat center center;
     background-size: cover;
   }
 
   60%,
   75% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/gb7n4cNSmKY/1280x720") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/gb7n4cNSmKY/1280x720") no-repeat center center;
     background-size: cover;
   }
 
   80%,
   95% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/6gTxjDrGCVI/1280x720") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/6gTxjDrGCVI/1280x720") no-repeat center center;
     background-size: cover;
   }
 }
@@ -557,41 +553,31 @@ ul {
   0%,
   100%,
   15% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/igmaRVtMhqg/853x481") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/igmaRVtMhqg/853x481") no-repeat center center;
     background-size: cover;
   }
 
   20%,
   35% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/5D9SyUI3wHU/853x480") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/5D9SyUI3wHU/853x480") no-repeat center center;
     background-size: cover;
   }
 
   40%,
   55% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/IZTnVWWbd4U/853x480") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/IZTnVWWbd4U/853x480") no-repeat center center;
     background-size: cover;
   }
 
   60%,
   75% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/gb7n4cNSmKY/853x480") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/gb7n4cNSmKY/853x480") no-repeat center center;
     background-size: cover;
   }
 
   80%,
   95% {
-    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)),
-      url("https://source.unsplash.com/6gTxjDrGCVI/853x480") no-repeat center
-        center;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(21, 21, 21, 0.5)), url("https://source.unsplash.com/6gTxjDrGCVI/853x480") no-repeat center center;
     background-size: cover;
   }
 }
@@ -653,17 +639,21 @@ ul {
     }
   }
 
+  .header__title {
+    font-size: 2.5rem;
+  }
+
+  .header__link {
+    margin: 0 .75rem;
+  }
+
   .container {
     &.header {
       min-height: 98vh;
 
-      .bg {
-        background-attachment: scroll !important;
-      }
-
       h1 {
-        margin-top: 0;
-        font-size: 2.15rem;
+        // margin-top: 0;
+        //font-size: 2.15rem;
       }
     }
 
@@ -674,6 +664,7 @@ ul {
 
     &.footer {
       align-items: center;
+      text-align: center;
 
       .wrapper {
         justify-content: center;
@@ -739,6 +730,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .header__title {
+    font-size: 2.25rem;
+  }
+
+  .header__link {
+    margin: 0 .5rem;
+  }
+
   .right-triangle {
     background-attachment: scroll;
   }

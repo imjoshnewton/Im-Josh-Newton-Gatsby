@@ -47,7 +47,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -H $HOSTNAME -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run format && npm run clean && npm run develop",
+    "start": "npm run format && npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
