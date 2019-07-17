@@ -30,7 +30,7 @@ const BlogIndex = () => {
     }
   `)
   const posts = data.allContentfulBlogPost.edges
-  console.log("posts", posts)
+  console.log("Loaded following posts: ", posts)
   const styles = {
     container: {},
     title: {
