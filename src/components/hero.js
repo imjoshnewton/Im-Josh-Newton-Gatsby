@@ -15,7 +15,7 @@ class Hero extends Component {
   }
 
   render() {
-    console.log("props", this.props)
+    // console.log("props", this.props)
     const styles = {
       header: {
         minHeight: this.state.height,
@@ -73,19 +73,19 @@ class Hero extends Component {
 
             <p className="header__sub-title">
               <Link to="/#About" className="header__link">
-                about
+                About
               </Link>
               <span>&nbsp;-&nbsp;</span>
               <Link to="/#More" className="header__link">
-                more
+                More
               </Link>
               <span>&nbsp;-&nbsp;</span>
               <Link to="/#Blog" className="header__link">
-                blog
+                Blog
               </Link>
               <span>&nbsp;-&nbsp;</span>
               <Link to="/#Connect" className="header__link">
-                connect
+                Connect
               </Link>
             </p>
           </div>
@@ -103,7 +103,7 @@ class Hero extends Component {
 }
 
 Hero.defaultProps = {
-  height: "90vh",
+  height: "95vh",
 }
 
 // export default Hero

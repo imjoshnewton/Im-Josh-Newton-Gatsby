@@ -22,18 +22,18 @@ const SecondPage = ({ data, location }) => {
 
 export default SecondPage
 
-export const query = graphql`
-  {
-    bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
-      title
-      credit
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 1080) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
+//       title
+//       credit
+//       localFile {
+//         childImageSharp {
+//           fluid(maxWidth: 1080) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

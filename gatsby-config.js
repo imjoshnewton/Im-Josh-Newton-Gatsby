@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ["Amiko", "Montserrat"],
+          families: ["Amiko", "Montserrat:400,700"],
         },
       },
     },

@@ -14,7 +14,9 @@ const BlogIndex = () => {
         edges {
           node {
             description {
-              description
+              childMarkdownRemark {
+                html
+              }
             }
             title
             publishDate(formatString: "MMMM Do, YYYY")
@@ -32,12 +34,18 @@ const BlogIndex = () => {
   const posts = data.allContentfulBlogPost.edges
   console.log("Loaded following posts: ", posts)
   const styles = {
-    container: {},
+    container: {
+      marginBottom: "1rem",
+    },
     title: {
       color: "#f2ebea",
       textTransform: "uppercase",
+      marginBottom: "0",
     },
-    date: {},
+    date: {
+      fontStyle: "italic",
+      marginBottom: "0.75em",
+    },
     description: {},
   }
 
@@ -64,8 +72,17 @@ const BlogIndex = () => {
               <Link to={`/blog/${post.slug}`}>
                 <h3 style={styles.title}>{post.title}</h3>
               </Link>
-              <small style={styles.data}>{post.publishDate}</small>
-              <p style={styles.description}>{post.description.description}</p>
+              <div style={styles.date}>
+                <small>
+                  <em>{post.publishDate}</em>
+                </small>
+              </div>
+              <div
+                style={styles.description}
+                dangerouslySetInnerHTML={{
+                  __html: post.description.childMarkdownRemark.html,
+                }}
+              ></div>
             </div>
           )
         })}

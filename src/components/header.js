@@ -40,7 +40,7 @@ class Nav extends React.Component {
   render() {
     const styles = {
       container: {
-        position: "fixed",
+        position: "absolute",
         top: 0,
         left: 0,
         zIndex: "99",
@@ -50,7 +50,7 @@ class Nav extends React.Component {
         justifyContent: "space-between",
         width: "100%",
         color: "white",
-        background: this.props.showTitle ? "rgba(25,25,25,0.5)" : null,
+        background: this.props.showTitle ? "rgba(25,25,25,0.25)" : null,
       },
       logo: {
         margin: "0 1rem",
