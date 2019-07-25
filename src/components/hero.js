@@ -18,11 +18,10 @@ class Hero extends Component {
     // console.log("props", this.props)
     const styles = {
       header: {
-        minHeight: this.state.height,
+        height: this.state.height,
       },
       bg: {
         height: this.state.height,
-        // maxHeight: "800px",
         position: "fixed",
         opacity: "0",
         willChange: "opacity",
