@@ -38,18 +38,18 @@ class Hero extends Component {
           "linear-gradient(rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0.6))",
       },
     }
-    const bgImage1 = this.props.data.bgImage1.localFile.childImageSharp.fluid,
-      bgImage2 = this.props.data.bgImage2.localFile.childImageSharp.fluid,
-      bgImage3 = this.props.data.bgImage3.localFile.childImageSharp.fluid,
-      bgImage4 = this.props.data.bgImage4.localFile.childImageSharp.fluid,
-      bgImage5 = this.props.data.bgImage5.localFile.childImageSharp.fluid
+    // const bgImage1 = this.props.data.bgImage1.localFile.childImageSharp.fluid,
+    //   bgImage2 = this.props.data.bgImage2.localFile.childImageSharp.fluid,
+    //   bgImage3 = this.props.data.bgImage3.localFile.childImageSharp.fluid,
+    //   bgImage4 = this.props.data.bgImage4.localFile.childImageSharp.fluid,
+    //   bgImage5 = this.props.data.bgImage5.localFile.childImageSharp.fluid
 
     // For slow internet connections
-    // const bgImage1 = this.props.data.bgImage1.childImageSharp.fluid,
-    //   bgImage2 = this.props.data.bgImage2.childImageSharp.fluid,
-    //   bgImage3 = this.props.data.bgImage3.childImageSharp.fluid,
-    //   bgImage4 = this.props.data.bgImage4.childImageSharp.fluid,
-    //   bgImage5 = this.props.data.bgImage5.childImageSharp.fluid
+    const bgImage1 = this.props.data.bgImage1.childImageSharp.fluid,
+      bgImage2 = this.props.data.bgImage2.childImageSharp.fluid,
+      bgImage3 = this.props.data.bgImage3.childImageSharp.fluid,
+      bgImage4 = this.props.data.bgImage4.childImageSharp.fluid,
+      bgImage5 = this.props.data.bgImage5.childImageSharp.fluid
 
     // const bgImage1 = this.props.heroImages[0].fluid,
     //   bgImage2 = this.props.heroImages[1].fluid,
@@ -108,108 +108,62 @@ Hero.defaultProps = {
 // export default Hero
 
 // For faster internet and deployment
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
-          title
-          credit
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1080) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        bgImage2: unsplashImagesYaml(title: { eq: "Parking Meeters" }) {
-          title
-          credit
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1080) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        bgImage3: unsplashImagesYaml(title: { eq: "Golden Sunrise" }) {
-          title
-          credit
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1080) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        bgImage4: unsplashImagesYaml(title: { eq: "Black and White Windows" }) {
-          title
-          credit
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1080) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-        bgImage5: unsplashImagesYaml(title: { eq: "Canon Film Camera" }) {
-          title
-          credit
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1080) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Hero data={data} {...props} />}
-  />
-)
-
-// For slow internet connections
 // export default props => (
 //   <StaticQuery
 //     query={graphql`
 //       {
-//         bgImage1: file(relativePath: { eq: "chicago-skyline.jpeg" }) {
-//           childImageSharp {
-//             fluid(maxWidth: 1180) {
-//               ...GatsbyImageSharpFluid_withWebp
+//         bgImage1: unsplashImagesYaml(title: { eq: "Chicago Skyline" }) {
+//           title
+//           credit
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1080) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
 //             }
 //           }
 //         }
-//         bgImage2: file(relativePath: { eq: "parking-meeters.jpeg" }) {
-//           childImageSharp {
-//             fluid(maxWidth: 1180) {
-//               ...GatsbyImageSharpFluid_withWebp
+//         bgImage2: unsplashImagesYaml(title: { eq: "Parking Meeters" }) {
+//           title
+//           credit
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1080) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
 //             }
 //           }
 //         }
-//         bgImage3: file(relativePath: { eq: "golden-sunrise.jpeg" }) {
-//           childImageSharp {
-//             fluid(maxWidth: 1180) {
-//               ...GatsbyImageSharpFluid_withWebp
+//         bgImage3: unsplashImagesYaml(title: { eq: "Golden Sunrise" }) {
+//           title
+//           credit
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1080) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
 //             }
 //           }
 //         }
-//         bgImage4: file(relativePath: { eq: "black-and-white-windows.jpeg" }) {
-//           childImageSharp {
-//             fluid(maxWidth: 1180) {
-//               ...GatsbyImageSharpFluid_withWebp
+//         bgImage4: unsplashImagesYaml(title: { eq: "Black and White Windows" }) {
+//           title
+//           credit
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1080) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
 //             }
 //           }
 //         }
-//         bgImage5: file(relativePath: { eq: "canon-film-camera.jpeg" }) {
-//           childImageSharp {
-//             fluid(maxWidth: 1180) {
-//               ...GatsbyImageSharpFluid_withWebp
+//         bgImage5: unsplashImagesYaml(title: { eq: "Canon Film Camera" }) {
+//           title
+//           credit
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1080) {
+//                 ...GatsbyImageSharpFluid_withWebp
+//               }
 //             }
 //           }
 //         }
@@ -218,3 +172,49 @@ export default props => (
 //     render={data => <Hero data={data} {...props} />}
 //   />
 // )
+
+// For slow internet connections
+export default props => (
+  <StaticQuery
+    query={graphql`
+      {
+        bgImage1: file(relativePath: { eq: "chicago-skyline.jpeg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1180) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        bgImage2: file(relativePath: { eq: "parking-meeters.jpeg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1180) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        bgImage3: file(relativePath: { eq: "golden-sunrise.jpeg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1180) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        bgImage4: file(relativePath: { eq: "black-and-white-windows.jpeg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1180) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        bgImage5: file(relativePath: { eq: "canon-film-camera.jpeg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1180) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Hero data={data} {...props} />}
+  />
+)

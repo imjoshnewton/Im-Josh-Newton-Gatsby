@@ -21,11 +21,11 @@ const BlogIndex = () => {
             title
             publishDate(formatString: "MMMM Do, YYYY")
             slug
-            heroImage {
-              fluid {
-                tracedSVG
-              }
-            }
+            # heroImage {
+            #   fluid {
+            #     tracedSVG
+            #   }
+            # }
           }
         }
       }
