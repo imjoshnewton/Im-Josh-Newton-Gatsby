@@ -80,12 +80,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-yaml`,
-    {
-      resolve: `gatsby-source-remote-images`,
-      options: {
-        filter: node => node.internal.type === `UnsplashImagesYaml`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-remote-images`,
+    //   options: {
+    //     filter: node => node.internal.type === `UnsplashImagesYaml`,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
