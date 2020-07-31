@@ -7,21 +7,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 class Hero extends Component {
   constructor(props) {
     super(props)
-    this.state = { height: props.height }
+    this.state = { height1: props.height, height2: props.height + 100 }
   }
 
   componentDidMount() {
-    this.setState({ height: window.innerHeight + 20 + "px" })
+    this.setState({
+      height1: window.innerHeight + "px",
+      height2: window.innerHeight + 100 + "px",
+    })
   }
 
   render() {
     // console.log("props", this.props)
     const styles = {
       header: {
-        height: this.state.height,
+        height: this.state.height1,
       },
       bg: {
-        height: this.state.height,
+        height: this.state.height2,
         position: "fixed",
         opacity: "0",
         willChange: "opacity",
