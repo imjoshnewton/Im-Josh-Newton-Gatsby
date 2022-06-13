@@ -122,6 +122,7 @@ ul {
   padding: 25px;
   position: relative;
   transition: all 500ms ease-in-out;
+  z-index: 1;
 
   &.body {
     justify-content: center;
@@ -159,6 +160,7 @@ ul {
     align-items: flex-end;
     padding: 5% 15%;
     background: $darkgrey;
+    z-index: 1;
 
     h1 {
       animation-delay: .5s;
@@ -489,6 +491,7 @@ ul {
   background-attachment: fixed;
   -webkit-clip-path: $triangle;
   clip-path: $triangle;
+  z-index: 1;
 }
 
 .fifty-rect {
@@ -499,6 +502,7 @@ ul {
   background-attachment: fixed;
   -webkit-clip-path: $rect;
   clip-path: $rect;
+  z-index: 1;
 }
 
 // The animation code
